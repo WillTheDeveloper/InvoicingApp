@@ -28,9 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.bttn_create_product = new System.Windows.Forms.Button();
             this.bttn_edit_product = new System.Windows.Forms.Button();
             this.bttn_delete_product = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.masterDataSet = new InvoicingApp.masterDataSet();
+            this.masterDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_create_product
@@ -60,16 +67,43 @@
             this.bttn_delete_product.Text = "Delete Product";
             this.bttn_delete_product.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.DataSource = this.masterDataSetBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(13, 133);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(844, 605);
+            this.dataGridView1.TabIndex = 3;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // masterDataSetBindingSource
+            // 
+            this.masterDataSetBindingSource.DataSource = this.masterDataSet;
+            this.masterDataSetBindingSource.Position = 0;
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 750);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bttn_delete_product);
             this.Controls.Add(this.bttn_edit_product);
             this.Controls.Add(this.bttn_create_product);
             this.Name = "Products";
             this.Text = "Products";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -79,5 +113,8 @@
         private System.Windows.Forms.Button bttn_create_product;
         private System.Windows.Forms.Button bttn_edit_product;
         private System.Windows.Forms.Button bttn_delete_product;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource masterDataSetBindingSource;
+        private masterDataSet masterDataSet;
     }
 }
