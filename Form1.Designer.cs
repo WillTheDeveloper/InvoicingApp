@@ -40,6 +40,7 @@
             this.bttn_products.TabIndex = 0;
             this.bttn_products.Text = "Products";
             this.bttn_products.UseVisualStyleBackColor = true;
+            this.bttn_products.Click += new System.EventHandler(this.bttn_products_Click);
             // 
             // bttn_customers
             // 
@@ -49,6 +50,7 @@
             this.bttn_customers.TabIndex = 1;
             this.bttn_customers.Text = "Customers";
             this.bttn_customers.UseVisualStyleBackColor = true;
+            this.bttn_customers.Click += new System.EventHandler(this.bttn_customers_Click);
             // 
             // Form1
             // 

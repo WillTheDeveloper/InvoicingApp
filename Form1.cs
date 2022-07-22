@@ -21,5 +21,17 @@ namespace InvoicingApp
         {
 
         }
+
+        private void bttn_products_Click(object sender, EventArgs e)
+        {
+            var p = new Products();
+            p.Show();
+        }
+
+        private void bttn_customers_Click(object sender, EventArgs e)
+        {
+            var c = new Customers();
+            c.Show();
+        }
     }
 }

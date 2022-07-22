@@ -21,5 +21,10 @@ namespace InvoicingApp
         {
 
         }
+
+        private void productsBindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,14 +32,16 @@
             this.bttn_create_product = new System.Windows.Forms.Button();
             this.bttn_edit_product = new System.Windows.Forms.Button();
             this.bttn_delete_product = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.masterDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterDataSet = new InvoicingApp.masterDataSet();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.productsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.productsBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_create_product
@@ -69,20 +71,6 @@
             this.bttn_delete_product.Text = "Delete Product";
             this.bttn_delete_product.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.DataSource = this.productsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 133);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(844, 605);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
             // masterDataSetBindingSource
             // 
             this.masterDataSetBindingSource.DataSource = this.masterDataSet;
@@ -98,21 +86,32 @@
             this.productsBindingSource.DataMember = "products";
             this.productsBindingSource.DataSource = this.masterDataSetBindingSource;
             // 
+            // productsBindingSource1
+            // 
+            this.productsBindingSource1.DataMember = "products";
+            this.productsBindingSource1.DataSource = this.masterDataSetBindingSource;
+            this.productsBindingSource1.CurrentChanged += new System.EventHandler(this.productsBindingSource1_CurrentChanged);
+            // 
+            // productsBindingSource2
+            // 
+            this.productsBindingSource2.DataMember = "products";
+            this.productsBindingSource2.DataSource = this.masterDataSet;
+            // 
             // Products
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1342, 750);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.bttn_delete_product);
             this.Controls.Add(this.bttn_edit_product);
             this.Controls.Add(this.bttn_create_product);
             this.Name = "Products";
             this.Text = "Products";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,9 +121,10 @@
         private System.Windows.Forms.Button bttn_create_product;
         private System.Windows.Forms.Button bttn_edit_product;
         private System.Windows.Forms.Button bttn_delete_product;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource masterDataSetBindingSource;
         private masterDataSet masterDataSet;
         private System.Windows.Forms.BindingSource productsBindingSource;
+        private System.Windows.Forms.BindingSource productsBindingSource2;
+        private System.Windows.Forms.BindingSource productsBindingSource1;
     }
 }
