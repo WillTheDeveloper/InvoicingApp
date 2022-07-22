@@ -26,12 +26,14 @@ namespace InvoicingApp
         {
             var p = new Products();
             p.Show();
+            bttn_products.Enabled = false;
         }
 
         private void bttn_customers_Click(object sender, EventArgs e)
         {
             var c = new Customers();
             c.Show();
+            bttn_customers.Enabled = false;
         }
     }
 }
