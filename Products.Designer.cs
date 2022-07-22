@@ -33,11 +33,11 @@
             this.bttn_edit_product = new System.Windows.Forms.Button();
             this.bttn_delete_product = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.masterDataSet = new InvoicingApp.masterDataSet();
             this.masterDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new InvoicingApp.masterDataSet();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // bttn_create_product
@@ -79,16 +79,17 @@
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(844, 605);
             this.dataGridView1.TabIndex = 3;
-            // 
-            // masterDataSet
-            // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // masterDataSetBindingSource
             // 
             this.masterDataSetBindingSource.DataSource = this.masterDataSet;
             this.masterDataSetBindingSource.Position = 0;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Products
             // 
@@ -102,8 +103,8 @@
             this.Name = "Products";
             this.Text = "Products";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.masterDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.masterDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
