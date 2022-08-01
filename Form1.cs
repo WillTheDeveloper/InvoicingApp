@@ -26,14 +26,14 @@ namespace InvoicingApp
         {
             var p = new Products();
             p.Show();
-            bttn_products.Enabled = false;
+            bttn_products.Enabled = false; // Disable the button so multiple instances cannot be created
         }
 
         private void bttn_customers_Click(object sender, EventArgs e)
         {
             var c = new Customers();
             c.Show();
-            bttn_customers.Enabled = false;
+            bttn_customers.Enabled = false; // Disable the button so multiple instances cannot be created
         }
     }
 }
