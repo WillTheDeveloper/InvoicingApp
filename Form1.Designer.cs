@@ -34,9 +34,10 @@
             // 
             // bttn_products
             // 
-            this.bttn_products.Location = new System.Drawing.Point(12, 12);
+            this.bttn_products.Location = new System.Drawing.Point(8, 8);
+            this.bttn_products.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttn_products.Name = "bttn_products";
-            this.bttn_products.Size = new System.Drawing.Size(239, 93);
+            this.bttn_products.Size = new System.Drawing.Size(159, 60);
             this.bttn_products.TabIndex = 0;
             this.bttn_products.Text = "Products";
             this.bttn_products.UseVisualStyleBackColor = true;
@@ -44,9 +45,10 @@
             // 
             // bttn_customers
             // 
-            this.bttn_customers.Location = new System.Drawing.Point(257, 12);
+            this.bttn_customers.Location = new System.Drawing.Point(171, 8);
+            this.bttn_customers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bttn_customers.Name = "bttn_customers";
-            this.bttn_customers.Size = new System.Drawing.Size(239, 93);
+            this.bttn_customers.Size = new System.Drawing.Size(159, 60);
             this.bttn_customers.TabIndex = 1;
             this.bttn_customers.Text = "Customers";
             this.bttn_customers.UseVisualStyleBackColor = true;
@@ -54,13 +56,15 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1395, 772);
+            this.ClientSize = new System.Drawing.Size(930, 502);
             this.Controls.Add(this.bttn_customers);
             this.Controls.Add(this.bttn_products);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Invoicing";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 

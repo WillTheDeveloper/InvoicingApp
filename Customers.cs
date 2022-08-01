@@ -16,5 +16,15 @@ namespace InvoicingApp
         {
             InitializeComponent();
         }
+
+        private void Customers_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Customers_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }

@@ -35,5 +35,10 @@ namespace InvoicingApp
             c.Show();
             bttn_customers.Enabled = false; // Disable the button so multiple instances cannot be created
         }
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
